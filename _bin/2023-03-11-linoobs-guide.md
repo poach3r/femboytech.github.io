@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: "Linoobs Guide"
 date: 2023-03-17 00:00:00 -0500
 author: poacher
@@ -26,47 +26,56 @@ Desktop Environments and distribution are frequently conflated by new users. You
 
 Now the terminal may seem rather scary at first, however it really isn't, it's an extremely useful tool that you should familiarize yourself with.
 
-## <a href="https://man7.org/linux/man-pages/man8/sudo.8.html">sudo<a>
+## [sudo](https://man7.org/linux/man-pages/man8/sudo.8.html)
 
-Sudo is a command which allows you to run any command as **root**, this is the equivalent to running a program as **administrator** on Windows. Simply type it before whatever command you would like to run as **root** and then type in your password.
+sudo is a command which allows you to run any command as **root**, this is the equivalent to running a program as **administrator** on Windows. Simply type it before whatever command you would like to run as **root** and then type in your password.
 
-## apt
+## APT and DNF
 
 APT stands for Advanced Packaging Tool, it is the command line utility to install, remove, and update packages (programs) on Debian based distributions such as KDE Neon, Ubuntu, and Mint.
 
+DNF stands for Dandified yum (don't ask) and is the same thing as APT but for RHEL distros like Fedora, CentOS (rip), and of course, RHEL Enterprise Linux.
+
 ### Installing Packages
 
-`sudo apt install package_name` 
+`apt install package_name`
+`dnf install package_name`
 
-allows you to install any package within the Debian repositories.
+allows you to install any package within the Debian/Fedora repositories.
 
 ### Removing Packages
 
-`sudo apt remove package_name` 
+`apt remove package_name` 
+`dnf remove package_name`
 
 allows you to remove any package that was installed on your system via apt.
 
 ### Search for Packages
 
 `apt search package_name`
+`dnf search package_name`
 
 allows you to serach for packages in the Debian repositories
 
-### Upgrade Packages
+### Update System
 
-`sudo apt full-upgrade` 
+`apt full-upgrade`
+`dnf upgrade --refresh`
 
-will upgrade your entire system, please use **EXTREME CAUTION** with this command as it can cause **PERMANENT DAMAGE** to your system.
+will update your entire system, please use caution with this command as it can cause permanent damage to your system if used improperly, please check the documentation for more info.
 
-## <a href="https://man7.org/linux/man-pages/man1/man.1.html">man<a>
+[APT Documentation](https://ubuntu.com/server/docs/package-management)
+[DNF Documentation](https://dnf.readthedocs.io/en/latest/)
 
-Man is a utility which is usually installed by default on most distributions, it will display a verbose manual for whatever command you would like.
+## [man](https://man7.org/linux/man-pages/man1/man.1.html)
+
+man is a utility which is usually installed by default on most distributions, it will display a verbose manual for whatever command you would like.
 
 `man command_name`
 
-## <a href="https://man7.org/linux/man-pages/man1/echo.1.html">echo<a>
+## [echo](https://man7.org/linux/man-pages/man1/echo.1.html)
 
-Echo is a utility that displays whatever text you would like to the terminal.
+echo is a utility that displays whatever text you would like to the terminal.
 
 `echo "Hello, World!"`
 
@@ -74,17 +83,17 @@ outputs
 
 `Hello, World`
 
-## <a href="https://man7.org/linux/man-pages/man1/touch.1.html">touch<a>
+## [touch](https://man7.org/linux/man-pages/man1/touch.1.html)
 
-Touch is a utility which allows you to easily create files.
+touch is a utility which allows you to easily create files.
 
 `touch ~/dir1/helloworld.txt`
 
 creates the file helloworld.txt
 
-## <a href="https://man7.org/linux/man-pages/man1/cat.1.html">cat<a>
+## [cat](https://man7.org/linux/man-pages/man1/cat.1.html)
 
-Cat is a utility that will display the content of any text file on your system.
+cat is a utility that will display the content of any text file on your system.
 
 `cat ~/dir1/helloworld.txt`
 
@@ -93,9 +102,9 @@ outputs
 `Hello, World!`
 `How are you?`
 
-## <a href="https://man7.org/linux/man-pages/man1/grep.1.html">grep<a>
+## [grep](https://man7.org/linux/man-pages/man1/grep.1.html)
 
-Grep is a utility that will search any terminal output for a specific phrase. It is commonly used by "piping" another command into it.
+grep is a utility that will search any terminal output for a specific phrase. It is commonly used by "piping" another command into it.
 
 `cat ~/dir1/helloworld.txt | grep "How"`
                          ^ This is a pipe!
@@ -103,9 +112,9 @@ outputs
 
 `How are you?`
 
-## <a href="https://man7.org/linux/man-pages/man1/ls.1.html">ls<a>
+## [ls](https://man7.org/linux/man-pages/man1/ls.1.html)
 
-Ls is a utility which lists the contents of a directory.
+ls is a utility which lists the contents of a directory.
 
 `ls ~/dir1`
 
@@ -113,7 +122,7 @@ outputs
 
 `file.txt helloworld.txt`
 
-## <a href="https://man7.org/linux/man-pages/man1/mv.1.html">mv<a>
+## [mv](https://man7.org/linux/man-pages/man1/mv.1.html)
 
 Mv is a utility which lets you move files.
 
@@ -121,7 +130,7 @@ Mv is a utility which lets you move files.
 
 will move file.txt from ~/dir1 to ~/dir2
 
-## <a href="https://man7.org/linux/man-pages/man1/cp.1.html">cp<a>
+## [cp](https://man7.org/linux/man-pages/man1/cp.1.html)
 
 Cp is a poorly named utility which allows you to copy files.
 
@@ -171,61 +180,62 @@ Sometimes if you desperately need a Windows program you can emulate it through W
 
 Not all programs are compatible with Linux and this is fine! There are plenty of alternatives to these programs that are usually free and open source.
 
-For easily finding alternatives I would recommend taking a look at <a href="https://alternativeto.net/">Alternative To.<a>
+For easily finding alternatives I would recommend taking a look at [AlternativeTo.](https://alternativeto.net/)
 
 ## Microsoft Office Suite
 
-The Microsoft Office Suite is very easily replaced by Libre-Office, it is one of the most developed free and open source programs of all time and features everything in the Microsoft Office Suite.
+The Microsoft Office Suite is very easily replaced by LibreOffice and OpenOffice as they feature mostly everything in Microsoft Office Suite including .docx support.
 
-<a href="https://www.libreoffice.org/">Libre-Office<a>
+[LibreOffice](https://www.libreoffice.org/)
+[OpenOffice](https://www.openoffice.org/)
 
 ## Photoshop
 
 Photoshop is not as easily replaced, alternatives like Gimp and Krita exist however they are not as feature rich. Gimp lacks things like Non Destructive Editing and Krita is mostly for drawing.
 
-<a href="https://www.gimp.org/">Gimp<a>
+[Gimp](https://www.gimp.org/)
 
-<a href="https://krita.org/">Krita<a>
+[Krita](https://krita.org/)
 
 ## Snip/ShareX
 
-Snip and ShareX are both replaceable via either Flameshot or GNOME's screenshot tool, they function almost identically however they lack the ability to auto upload to a website like ShareX can.
+Snip and ShareX are both replaceable via either Flameshot on X and grim+grimshot on Wayland, they function almost identically however they lack the ability to auto upload to a website like ShareX can.
 
-<a href="https://flameshot.org/">Flameshot<a>
+[Flameshot](https://flameshot.org/)
+[grim](https://sr.ht/~emersion/grim/)
+[grimshot](https://github.com/OctopusET/sway-contrib)
 
 ## Adobe Premiere 
 
-Kdenlive is a fully featured editor which is on par with Adobe Premiere, it can be a bit slower in some areas and it does have some issues with certain hardware, however these problems are rather minor.
+Kdenlive is a rich editor that is rather similar to Adobe Premiere, however it can be a bit slower in some areas and it does have some issues with certain hardware.
 
-<a href="https://flameshot.org/">Kdenlive<a>
+[Kdenlive](https://kdenlive.org/en/)
 
 ## Discord
 
-While Discord *can* work perfectly fine on Linux it does not always work fine, this is why I recommend either Webcord or GTKCord4. Webcord is a fully featured Discord client which functions identically to the original, GTKCord4 is a beta program which rewrites the Discord client using the GTK toolkit.
+While Discord *can* work perfectly fine on Linux it does not always work fine, this is why I recommend Vencord. Vencord is essentially BetterDiscord but better, it also works very well on Linux.
 
-<a href="https://github.com/SpacingBat3/WebCord">Webcord<a>
-
-<a href="https://github.com/diamondburned/gtkcord4">GTKCord4<a>
+[Vencord](https://vencord.dev/)
 
 ## Outlook
 
 There are many E-Mail clients for Linux however none of them are particularly great, however, Thunderbird has been undergoing many rewrites and will be massively improved in due time.
 
-<a href="https://www.thunderbird.net/en-US/">Thunderbird<a>
+[Thunderbird](https://www.thunderbird.net/en-US/)
 
 ## 7Zip/WinRAR
 
 WinRAR isn't on Linux (duh) and while 7Zip is on Linux it's a pretty bad experience. Some file explorers will come with the ability to view RAR files by default and some don't, if yours doesn't then I recommend using Xarchiver and optionally a plugin which better integrates it with your file explorer.
 
-<a href="https://xarchiver.sourceforge.net/">Xarchiver<a>
+[Xarchiver](https://xarchiver.sourceforge.net/)
 
-<a href="https://docs.xfce.org/xfce/thunar/archive">Thunar Xarchiver Plugin<a>
+[Thunar Xarchiver Plugin](https://docs.xfce.org/xfce/thunar/archive)
 
 ## Game Launchers
 
 The only official game launcher that is compatible with Linux is Steam, Steam on Linux is an incredible experience due to things like Proton, however if you want to play games from other launchers on Linux there is an answer. Lutris is a program which lets you connect to your launchers account and then download your games and play them through Wine/Proton, while not a seamless experience it works extremely well.
 
-<a href="https://lutris.net/">Lutris<a>
+[Lutris](https://lutris.net/)
 
 ## Multimedia Viewers
 
@@ -233,52 +243,52 @@ VLC, just use VLC.
 
 I'm kidding, while VLC is easily the best one there are other programs such as mpv and Celluloid (a front end for mpv).
 
-<a href="https://www.videolan.org/vlc/">VLC<a>
+[VLC](https://www.videolan.org/vlc/)
 
-<a href="https://mpv.io/">mpv<a>
+[mpv](https://mpv.io/)
 
-<a href="https://celluloid-player.github.io/">Celluloid<a>
+[Celluloid](https://celluloid-player.github.io/)
 
 # 10. Essential Programs
 
 These are programs that are very frequently used by you or required by other programs.
 
-## <a href="https://git-scm.com/">git<a>
+## [git](https://git-scm.com/)
 
-Git is a utility which allows you to easily download repositories from and commit to GitHub/GitLab. Also it was made by Linus Torvalds so you're obligated to use it.
+git is a utility which allows you to easily download repositories from and commit to GitHub/GitLab. Also it was made by Linus Torvalds so you're obligated to use it.
 
-## <a href="https://ffmpeg.org/">FFmpeg<a>
+## [FFmpeg](https://ffmpeg.org/)
 
 FFmpeg is a utility that allows you to easily modify videos through the commmand line, a commonly needed dependency.
 
-## <a href="https://imagemagick.org/">ImageMagick<a>
+## [ImageMagicl](https://imagemagick.org/)
 
 FFmpeg but for images, also a commonly needed dependency.
 
-## <a href="https://github.com/aristocratos/btop">BTOP<a>
+## [BTop(https://github.com/aristocratos/btop)
 
 BTOP is a massively improved version of HTOP, a TUI-based system monitoring utility.
 
-## <a href="https://www.youtube.com/watch?v=773PhMgEOFw">QEMU/VirtManager<a>
+## [QEMU/VirtManager](https://www.youtube.com/watch?v=773PhMgEOFw)
 
 VirtManager is a front end for QEMU, a utility that lets you easily create extremely efficient KVMs (Kernel Virtual Machines), I've linked a video by Mental Outlaw explaining how to use and install it.
 
-## <a href="https://www.vim.org/">Vim<a>
+## [vim](https://www.vim.org/)
 
-Vim is a TUI program that allows you to easily and quickly edit text, however, it has a rather steep learning curve so be wary of that.
+vim is a TUI program that allows you to easily and quickly edit text, however, it has a rather steep learning curve so be wary of that.
 
-## <a href="https://cmake.org/">CMake<a>
+## [CMake](https://cmake.org/)
 
-CMake is a utility that allows for the compilation of various programs, it is frequently needed when you want to install a program not found in your repositories.
+CMake is a utility that allows for the compilation of C++ programs, it is frequently needed when you want to install a program not found in your repositories.
 
-## <a href="https://gparted.org/">GParted<a>
+## [GParted](https://gparted.org/)
 
 GParted is program which allows you to easily partition disks.
 
-## <a href="https://gparted.org/">Timeshift<a>
+## [Timeshift](https://github.com/teejee2008/timeshift)
 
 Timeshift is a program which allows you to easily backup and restore your Linux install, a necessity if you plan on doing some tinkering with your system.
 
-## <a href="https://torproject.org/">Tor<a>
+## [Tor](https://torproject.org/)
 
 While Tor may have a poor reputation, it's an extremely useful program for securely and privately browsing the web.
