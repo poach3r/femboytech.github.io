@@ -13,7 +13,6 @@ plugins:
   - jekyll-news-sitemap
   - jekyll-sitemap
   - jekyll-twitter-plugin
-  - jekyll-analytics
 
 header_pages:
   - index.md
@@ -36,8 +35,3 @@ listen_for_clients_preferred_style: false
 author:
   email:
     poacher@femboy.tech: poacher@femboy.tech
-
-jekyll_analytics:
-  GoogleAnalytics:          # Add, if you want to track with Google Analytics
-    id: G-94Y06953GH          # Required - replace with your tracking id
-    anonymizeIp: true      # Optional - Default: false - set to true for anonymized tracking

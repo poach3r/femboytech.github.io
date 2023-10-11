@@ -21,5 +21,3 @@ gem 'jekyll-news-sitemap'
 gem 'jekyll-sitemap'
 
 gem 'jekyll-twitter-plugin'
-
-gem 'jekyll-analytics'
