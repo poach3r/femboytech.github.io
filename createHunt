@@ -1,0 +1,68 @@
+#!/bin/bash
+
+echo "Creating Variables"
+
+#assign variables to the arguments passed in
+postName=$1
+if [[ $postName = "" ]]
+then
+    read -p "Enter post name: " postName
+    read -p "Enter game name: " game
+    read -p "Enter method: " method
+    read -p "Enter total encounters: " encounters
+    read -p "Enter hunt status: " status
+    read -p "Enter Pokemon 1: " pkmn1
+    read -p "(Optional) Enter Pokemon 2: " pkmn2
+    read -p "(Optional) Enter Pokemon 3: " pkmn3
+else
+    game=$2
+    method=$3
+    encounters=$4
+    status=$5
+    pkmn1=$6
+    pkmn2=$7
+    pkmn3=$8
+fi
+#create separate vars for current date and time
+postDate=$(date +%Y-%m-%d)
+postTime=$(date +%H:%M:%S)
+#compile data into a final name
+postF=$(echo "_hunts/$postDate-$postName.md")
+
+echo "Creating File"
+
+#create file and add necessary data
+rm $postF > /dev/null 2>&1
+echo "---" >> $postF
+echo "layout: post" >> $postF
+echo "title: $postName" >> $postF
+echo "date: $postDate $postTime -0500" >> $postF
+echo "---" >> $postF
+echo "" >> $postF
+echo "**Game:** $game" >> $postF
+echo "" >> $postF
+echo "**Method:** $method" >> $postF
+echo "" >> $postF
+echo "**Encounters:** $encounters" >> $postF
+echo "" >> $postF
+echo "**Status:** $status" >> $postF
+echo "" >> $postF
+
+if [[ $pkmn1 != "" ]]
+then
+    echo '<img src="https://img.pokemondb.net/sprites/home/shiny/'$pkmn1'.png" alt="Sprites from PokemonDB">' >> $postF
+fi
+
+if [[ $pkmn2 != "" ]]
+then
+    echo '<img src="https://img.pokemondb.net/sprites/home/shiny/'$pkmn2'.png" alt="Sprites from PokemonDB">' >> $postF
+fi
+
+if [[ $pkmn3 != "" ]]
+then
+    echo '<img src="https://img.pokemondb.net/sprites/home/shiny/'$pkmn3'.png" alt="Sprites from PokemonDB">' >> $postF
+fi
+
+echo "File $postF created"
+
+code $postF

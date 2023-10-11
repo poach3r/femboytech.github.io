@@ -15,6 +15,7 @@ $container-width:      90% !default;
 $container-max-width:  700px !default;
 
 // text styling
+
 html {
     text-size-adjust: none;
     font-size: $base-font-size;
@@ -74,11 +75,6 @@ a {
         color: var(--background-color); 
         background-color: var(--base-color);
     }
-}
-
-span {
-    border: var(--border);
-    padding: 2px;
 }
 
 // layout
@@ -212,7 +208,7 @@ textarea { vertical-align: top; }
 // code and syntax highlighting
 .lineno { color: var(--code-color-1); margin-right: 15px; }
 figure.highlight { margin: 5px 0; }
-pre { background-color: #272839;  border: var(--border);  padding: 2px;  margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important;  font-family: $base-font-family !important; }
+pre { background-color: #16161e;  border: var(--border);  padding: 2px;  margin: 0;  overflow:auto;  font-size: $base-font-size;  color: var(--text-color);  line-height: 1.7 !important;  font-family: $base-font-family !important; border-radius: 0px}
 .highlight .hll { background-color: var(--code-color-2); }
 .highlight .c { color: var(--code-color-1); font-style: italic } /* Comment */
 .highlight .err { color: var(--code-color-3); background-color: var(--code-color-4); } /* Error */

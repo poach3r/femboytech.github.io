@@ -38,29 +38,37 @@ DNF stands for Dandified yum (don't ask) and is the same thing as APT but for RH
 
 ### Installing Packages
 
-`apt install package_name`
-`dnf install package_name`
+```
+apt install package_name
+dnf install package_name
+```
 
 allows you to install any package within the Debian/Fedora repositories.
 
 ### Removing Packages
 
-`apt remove package_name` 
-`dnf remove package_name`
+```
+apt remove package_name
+dnf remove package_name
+```
 
 allows you to remove any package that was installed on your system via apt.
 
 ### Search for Packages
 
-`apt search package_name`
-`dnf search package_name`
+```
+apt search package_name
+dnf search package_name
+```
 
 allows you to serach for packages in the Debian repositories
 
 ### Update System
 
-`apt full-upgrade`
-`dnf upgrade --refresh`
+```
+apt full-upgrade
+dnf upgrade --refresh
+```
 
 will update your entire system, please use caution with this command as it can cause permanent damage to your system if used improperly, please check the documentation for more info.
 
@@ -71,13 +79,17 @@ will update your entire system, please use caution with this command as it can c
 
 man is a utility which is usually installed by default on most distributions, it will display a verbose manual for whatever command you would like.
 
-`man command_name`
+```
+man command_name
+```
 
 ## [echo](https://man7.org/linux/man-pages/man1/echo.1.html)
 
 echo is a utility that displays whatever text you would like to the terminal.
 
-`echo "Hello, World!"`
+```
+echo "Hello, World!"
+```
 
 outputs
 
@@ -87,7 +99,9 @@ outputs
 
 touch is a utility which allows you to easily create files.
 
-`touch ~/dir1/helloworld.txt`
+```
+touch ~/dir1/helloworld.txt
+```
 
 creates the file helloworld.txt
 
@@ -95,7 +109,9 @@ creates the file helloworld.txt
 
 cat is a utility that will display the content of any text file on your system.
 
-`cat ~/dir1/helloworld.txt`
+```
+cat ~/dir1/helloworld.txt
+```
 
 outputs
 
@@ -106,27 +122,39 @@ outputs
 
 grep is a utility that will search any terminal output for a specific phrase. It is commonly used by "piping" another command into it.
 
-`cat ~/dir1/helloworld.txt | grep "How"`
-                         ^ This is a pipe!
+```
+cat ~/dir1/helloworld.txt | grep "How"
+                          ^ This is a pipe!*
+```
 outputs
 
-`How are you?`
+```
+How are you?
+```
+
+*may not display properly on mobile
 
 ## [ls](https://man7.org/linux/man-pages/man1/ls.1.html)
 
 ls is a utility which lists the contents of a directory.
 
-`ls ~/dir1`
+```
+ls ~/dir1
+```
 
 outputs
 
-`file.txt helloworld.txt`
+```
+file.txt helloworld.txt
+```
 
 ## [mv](https://man7.org/linux/man-pages/man1/mv.1.html)
 
 Mv is a utility which lets you move files.
 
-`mv ~/dir1/file.txt ~/dir2/file.txt`
+```
+mv ~/dir1/file.txt ~/dir2/file.txt
+```
 
 will move file.txt from ~/dir1 to ~/dir2
 
@@ -134,7 +162,9 @@ will move file.txt from ~/dir1 to ~/dir2
 
 Cp is a poorly named utility which allows you to copy files.
 
-`cp ~/dir2/file.txt ~/dir1/file.txt`
+```
+cp ~/dir2/file.txt ~/dir1/file.txt
+```
 
 will create a copy of file.txt inside of dir1
 
@@ -265,7 +295,7 @@ FFmpeg is a utility that allows you to easily modify videos through the commmand
 
 FFmpeg but for images, also a commonly needed dependency.
 
-## [BTop(https://github.com/aristocratos/btop)
+## [BTop](https://github.com/aristocratos/btop)
 
 BTOP is a massively improved version of HTOP, a TUI-based system monitoring utility.
 

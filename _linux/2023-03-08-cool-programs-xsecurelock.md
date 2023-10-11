@@ -13,28 +13,38 @@ author: poacher
 
 ### Universally:
 
-`git clone https://github.com/google/xsecurelock.git`
-`cd xsecurelock`
-`sh autogen.sh`
-`./configure --with-pam-service-name=SERVICE-NAME`
-`make`
-`sudo make install`
+```
+git clone https://github.com/google/xsecurelock.git
+cd xsecurelock
+sh autogen.sh
+./configure --with-pam-service-name=SERVICE-NAME
+make
+sudo make install
+```
 
 ### Arch:
 
-`pacman -S xsecurelock`
+```
+pacman -S xsecurelock
+```
 
 ### Void:
 
-`xbps-install xsecurelock`
+```
+xbps-install xsecurelock
+```
 
 # Usage:
 
-`xsecurelock` 
+```
+xsecurelock
+``` 
 
 will initialize the default lock screen.
 
-`env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock` 
+```
+env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock
+``` 
 
 will initialize the lockscreen with xscreensaver.
 
@@ -46,20 +56,28 @@ Automatic locking (or at least the method I will cover) requires <a href="https:
 
 ### Arch:
 
-`pacman -S xss-lock`
+```
+pacman -S xss-lock
+```
 
 ### Void:
 
-`xbps-install xss-lock`
+```
+xbps-install xss-lock
+```
 
 ## Usage:
 
 Adding
 
-`xset s 300 5`
+```
+xset s 300 5
+```
 
 and
 
-`xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock`
+```
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+```
 
 to the config file of your window manager or your .xinitrc will start allow XSecureLock to start after 300s of inactivity or whenever your system is told to suspend (ie closing a laptop lid).

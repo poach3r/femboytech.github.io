@@ -13,18 +13,24 @@ author: poacher
 
 ### Universally:
 
-`git clone https://github.com/themix-project/oomox.git --recursive`
-`cd oomox`
-`make -f po.mk install`
-`./gui.sh`
+```
+git clone https://github.com/themix-project/oomox.git --recursive
+cd oomox
+make -f po.mk install
+./gui.sh
+```
 
 ### Arch:
 
-`pacman -S themix-full-git`
+```
+pacman -S themix-full-git
+```
 
 # Usage:
 
-`themix-gui` 
+```
+themix-gui
+``` 
 
 will launch the GUI. Inside the GUI you can modify various presets and then export them by clicking the `Export Theme` button in the top right. You can also create Icons and then export them by clicking on the `Export Icons` button in the top right, next to the `Export Theme` button.
 
