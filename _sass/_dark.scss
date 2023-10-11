@@ -1,0 +1,32 @@
+/**
+ * Dark theme variables
+ */
+
+:root {
+  --base-color: #a9b1d6;
+  --border: solid 1px #7aa2f7;
+  --selection-background: #a9b1d6;
+  --selection-text: #1a1b26;
+  --background-color: #1a1b26;
+  --text-color: var(--base-color);
+  --placeholder-color: var(--base-color);
+  --link-color: var(--base-color);
+  --code-color-1: #c0caf5;
+  --code-color-2: #f7768e;
+  --code-color-3: #dd87b6;
+  --code-color-4: #bb9af7;
+  --code-color-5: #7dcfff;
+  --code-color-6: #738CA6;
+  --code-color-7: #73daca;
+  --code-color-8: #71AA97;
+  --code-color-9: #e0af68;
+  --code-color-10: #EDB83F;
+  --code-color-11: #28344a;
+  --code-color-12: #450026;
+  --code-color-13: #9E9E9E;
+  --code-color-14: #6C77BB;
+  --code-color-15: #6D8895;
+  --code-color-16: #1e90ff;
+  --code-color-17: #800000;
+  --code-color-18: #bbbbbb;
+}

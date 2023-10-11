@@ -1,0 +1,34 @@
+title: femboy.tech
+tagline: A personal blog for mostly Linux.
+description: A personal blog for mostly Linux.
+baseurl: "" # the subpath of your site, e.g. /blog
+author: poacher
+url: "https://femboy.tech" # the base hostname & protocol for your site, e.g. http://example.com
+logo: /assets/logo.png
+
+# Build settings
+# remote_theme: poach3r/tokyo-night-jekyll
+plugins:
+  - jekyll-gzip
+
+header_pages:
+  - index.md
+  - politics.md
+  - contact.md
+
+collections:
+  announcements:
+    output: true
+  bin:
+    output: true
+  linux:
+    output: true
+  politics:
+    output: true
+
+style: dark
+listen_for_clients_preferred_style: true
+
+author:
+  email:
+    poacher@femboy.tech: poacher@femboy.tech
