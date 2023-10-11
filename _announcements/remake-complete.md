@@ -7,14 +7,9 @@ author: poacher
 
 # Changelog:
 
-<span>test</span>
-- Reduced file size from 139mbs to 1mb
+- Reduced file size from 140mbs to 1mb
+- Improved load times
 - Revamped layouts and theme
 - Added a politics section
 - Added /home/ to header
 - Improved various articles
-
-
-<span>hello
-test
-world</span>
