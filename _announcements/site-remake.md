@@ -9,6 +9,8 @@ author: poacher
 
 I've been ignoring this site for a few months now (mostly due to being *very* busy this summer and lacking ideas) and have decided to remake the site and it's articles to both reduce the size of the site (its currently sitting at 140mbs) and the quality of the site.
 
+<!--more-->
+
 # The Plan
 
 Over the next few weeks I will be going through the process of rewriting all existsing articles. Afterwards, I plan on writing a new article at least once a month. I also plan on implementing some SEO.

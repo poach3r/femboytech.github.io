@@ -35,3 +35,5 @@ listen_for_clients_preferred_style: false
 author:
   email:
     poacher@femboy.tech: poacher@femboy.tech
+
+excerpt_separator: <!--more-->
