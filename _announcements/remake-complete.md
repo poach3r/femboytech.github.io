@@ -13,5 +13,3 @@ author: poacher
 - Added a politics section
 - Added /home/ to header
 - Improved various articles
-
-<!--more-->
