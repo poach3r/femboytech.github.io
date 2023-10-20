@@ -9,9 +9,9 @@ author: poacher
 
 [XSecureLock](https://github.com/google/xsecurelock) is a screen locking utility for X11 created by Google, yes, Google. It allows for large amounts of customization and top notch security.
 
-# Installation:
+# Installation
 
-### Universally:
+### Universally
 
 ```
 git clone https://github.com/google/xsecurelock.git
@@ -22,19 +22,19 @@ make
 sudo make install
 ```
 
-### Arch:
+### Arch
 
 ```
 pacman -S xsecurelock
 ```
 
-### Void:
+### Void
 
 ```
 xbps-install xsecurelock
 ```
 
-# Usage:
+# Usage
 
 ```
 xsecurelock
@@ -48,25 +48,25 @@ env XSECURELOCK_SAVER=saver_xscreensaver xsecurelock
 
 will initialize the lockscreen with xscreensaver.
 
-# Automatic Locking:
+# Automatic Locking
 
 Automatic locking (or at least the method I will cover) requires <a href="https://man.archlinux.org/man/xss-lock.1">xss-lock<a>
 
-## Installation:
+## Installation
 
-### Arch:
+### Arch
 
 ```
 pacman -S xss-lock
 ```
 
-### Void:
+### Void
 
 ```
 xbps-install xss-lock
 ```
 
-## Usage:
+## Usage
 
 Adding
 

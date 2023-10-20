@@ -7,7 +7,7 @@ author: poacher
 
 A WIP guide to Linux for extremely new users.
 
-# Disclaimer:
+# Disclaimer
 
 I am only human, I cannot cover everything, if there is anything you would like added to this article my <a href="/contact">Discord DMs are open<a> 
 

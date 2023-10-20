@@ -9,9 +9,9 @@ author: poacher
 
 [Themix/Oomox](https://github.com/themix-project/themix-gui) is a theming application which allows you to easily create new GTK2/3, Cinnamon, Openbox, and Spotify themes.
 
-# Installation:
+# Installation
 
-### Universally:
+### Universally
 
 ```
 git clone https://github.com/themix-project/oomox.git --recursive
@@ -20,13 +20,13 @@ make -f po.mk install
 ./gui.sh
 ```
 
-### Arch:
+### Arch
 
 ```
 pacman -S themix-full-git
 ```
 
-# Usage:
+# Usage
 
 ```
 themix-gui

@@ -5,7 +5,7 @@ date: 2023-10-10 11:07:34 -0000
 author: poacher
 ---
 
-# Changelog:
+# Changelog
 
 - Reduced file size from 140mbs to 1mb
 - Improved load times
@@ -13,3 +13,4 @@ author: poacher
 - Added a politics section
 - Added /home/ to header
 - Improved various articles
+- Added embeds

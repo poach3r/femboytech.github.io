@@ -9,7 +9,7 @@ author: poacher
 
 This will be a rather comprehensive guide for creating a rice from scratch, I will be ricing my desktop alongside you in this guide, my choices for programs will be mentioned when relevant.
 
-# 1. Choose a General Theme
+# Choose a General Theme
 
 This doesn't need to be anything specific, just think of a general concept or feeling that you want to base this around. Do you want it to feel warm? Do you want it to feel cosy? Do you want it to be minimal? Do you want lots of pink? etc...
 
@@ -17,7 +17,7 @@ There are a few color palette sites you can look at, I prefer https://colorhunt.
 
 For my rice I would like to do a very colorful, very satured rice.
 
-# 2. Choose a Wallpaper
+# Choose a Wallpaper
 
 The wallpaper is an extremely important aspect of the rice as it will likely define both the colorscheme and the feeling of the rice. For finding wallpapers I like to browse /wg/ because I'm a freak, however I recommend you browse something like Wallhaven or even just social media such as Twitter.
 
@@ -27,7 +27,7 @@ https://www.behance.net/gallery/12984019/What-Space-Really-Looks-Like
 
 ![wallpaper](https://i.postimg.cc/bvrCpcQd/wallpaper.jpg)
 
-# 3. Choosing a Window Manager
+# Choosing a Window Manager
 
 This is arguably the most important part of the rice as it will determine how you do everything and what programs you use.
 
@@ -55,17 +55,17 @@ Note: I know they're compositors not window managers, I'm calling them window ma
 
 **riverwm**: An efficient window manager written in Zig.
 
-# 4. Try out the Window Manager
+# Try out the Window Manager
 
 After installing the window manager you think you want to use, go into the config and edit a few things such as keybindings and the terminal emulator used. The majority of window managers will generate a config file at ~/.config/(WINDOW MANAGER NAME)/ on first boot, so simply boot into them, logout/restart, modify the config, then try it out.
 
 I modified the Hyprland config at ``~/.config/hypr/hyprland.conf`` and changed a few keybindings and then changed the default terminal emulator from Kitty to Foot (more on this later).
 
-# 5. Choosing Programs
+# Choosing Programs
 
 When ricing you will likely need to pick and choose what programs you want to use to serve certain functions, this section will cover these.
 
-## 5a. Bars
+## Bars
 
 The bar is another extremely important part of your rice as it will be on screen almost all the time, it displays extremely important information such as the time, your workspaces, battery life, and various other settings.
 
@@ -81,7 +81,7 @@ I used waybar for this rice however I have used polybar and yabar in the past.
 
 **lemonbar**: An extremely lightweight bar which is truly for hackers, it can only be used by piping standard input into it.
 
-## 5b. Notification Daemons
+## Notification Daemons
 
 Your notification daemon provides notifications, pretty self explanatory.
 
@@ -95,7 +95,7 @@ I chose mako for this however I have used dunst in the past.
 
 **fnott**: A keyboard driven notification daemon for Wayland.
 
-## 5c. App Launchers
+## App Launchers
 
 App launchers are also self explanatory, they allow you to easily launch programs with the press of a button (or 2!).
 
@@ -113,7 +113,7 @@ I have used Rofi in every single one of my rices, I recommend everyone use it.
 
 **Fuzzel**: A powerful but lightweight replacement for both Rofi and dmenu made for Wayland.
 
-## 5d. Terminal Emulators
+## Terminal Emulators
 
 While most terminal emulators are the same there are some minor differences that make some better than others.
 
@@ -127,7 +127,7 @@ On Wayland I will always use foot, however I like to use Kitty on Xorg.
 
 **Alacritty**: Very similar to Kitty however it is harder to use but less bloated,
 
-## 5e. File Managers
+## File Managers
 
 File manager choice is very limited, the majority of the ones on this list will be from big desktop environments however they can be used standalone.
 
@@ -143,7 +143,7 @@ I always use Thunar.
 
 **Ranger**: A TUI file manager.
 
-## 5f. Shells
+## Shells
 
 There are only 3 major shells on Linux, these shells are what allow you to use the terminal.
 
@@ -155,11 +155,11 @@ I have always used Fish, however zsh is better if you want a more customized exp
 
 **zsh**: A "do it yourself" type shell, the majority of features are disabled out of the box and you have to enable and config them yourself.
 
-# 6. Colors
+# Colors
 
 For colors you have 2 options, either automatically generate colors and themes for programs from your wallpaper using Pywal or manually pick them and manually create themes for apps, I much prefer using Pywal.
 
-# 7. Configuring the Window Manager
+# Configuring the Window Manager
 
 As stated earlier, almost all window manager config files are located at ~/.config/(WINDOW MANAGER NAME), I highly recommend keeping the documentation out at all times while configuring.
 
@@ -167,67 +167,67 @@ As stated earlier, almost all window manager config files are located at ~/.conf
 
 Depending on your window manager, the majority of the effects mentioned may require a compositor such as picom/compton.
 
-## 7a. Gaps
+## Gaps
 
 I prefer to keep my gaps somewhere between 5-10px, this keeps things separated while not taking up too much space.
 
 I have chosen to use gaps of 5px
 
-## 7b. Borders
+## Borders
 
 Borders are a good alternative to gaps, they also keep things separated but use less space.
 
 I have chosen to not use borders however you can use them on top of gaps just fine.
 
-## 7c. Rounding
+## Rounding
 
 Rounding does not always look good, it can very easily mess up a setup if used too aggressively.
 
 I have chosen to use rounding of 8px
 
-## 7d. Opacity
+## Opacity
 
 Opacity can look great however it can also get in the way, don't go overboard with it.
 
 I have chosen to use 0.8 opacity on active windows and 0.7 opacity on inactive windows.
 
-## 7e. Blur
+## Blur
 
 Blurring the background almost always looks great, it also helps improve clarity.
 
 I have chosen to use blur.
 
-## 7f. Drop Shadow
+## Drop Shadow
 
 Most window managers do not support drop shadow, even when using something such as picom, however if yours does and you area already using transparent windows then I highly recomend using it.
 
 I will be using drop shadows.
 
-# 8. Bar Configuration
+# Bar Configuration
 
 I cannot cover bar configuration in depth due to the massive differences between bars, however I will try my best to cover the basics.
 
-## 8a. Workspaces
+## Workspaces
 
 I prefer to keep my workspaces either on the left of the bar or in the middle, this allows for them to not interfere with the other aspects of the bar.
 
-## 8b. Clock
+## Clock
 
 I keep my clock at the rightmost edge of the bar and use the 12 hour format.
 
-## 8c. System Info
+## System Info
 
 I prefer displaying only my CPU usage, RAM usage, and battery level, I keep these to the right of the bar next to the clock.
 
-## 8d. Program Names
+## Program Names
 
 Some bars will allow you to display the name of the program currently being used, I like putting this on the left or middle of the bar depending on where my workspaces are.
 
-# 9. App Launcher Configuration
+# App Launcher Configuration
 
 Honestly just download someone elses script from GitHub and then modify the colors.
 
-# 10. Notification Daemon Configuration
+# Notification Daemon Configuration
 
 Notification daemons are generally easy to configure and usually use a similar format.
 
